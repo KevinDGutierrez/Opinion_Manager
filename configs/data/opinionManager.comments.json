@@ -1,0 +1,266 @@
+[{
+  "_id": {
+    "$oid": "67c240f7ed111bfc7cbf05aa"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:04:23.211Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:04:23.211Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24537545ba004c12ac219"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:22:31.564Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:22:31.564Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c247b8764fa00ffb6e5f69"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:33:12.333Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:33:12.333Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c249350a4ea78870cc9eba"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:39:33.542Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:39:33.542Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24979b2d6e622fbed3006"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:40:41.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:40:41.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c249eb1cb9da947ebc95e2"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:42:35.799Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:42:35.799Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24b9cc9cfada108f9e7af"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:49:48.724Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:49:48.724Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24bd21b828bfbb2e27733"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:50:42.949Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:50:42.949Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24c5642643eb9c3982530"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:52:54.476Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T23:52:54.476Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24d86800ef46375254399"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion muy mediocre",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T23:57:58.407Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:31:18.763Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24dcef3ca477b7f18a494"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-28T23:59:10.902Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:36:27.722Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c24ea4a77aef388a95ffd7"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-01T00:02:44.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:02:44.149Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2500b066164b1921983c3"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-01T00:08:43.895Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:08:43.895Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c250c2ff5b0df7fd028912"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "content": "Me parece una publicacion buena",
+  "publication": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-03-01T00:11:46.105Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:11:46.105Z"
+  }
+}]

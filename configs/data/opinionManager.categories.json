@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "67c1093a4fff7acef2f2057d"
+  },
+  "name": "universal",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T00:54:18.800Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T00:54:18.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c11c230f8e9177494291f2"
+  },
+  "name": "miedo",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T02:14:59.484Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T02:14:59.484Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c11ce50f8e9177494291f5"
+  },
+  "name": "juegos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T02:18:13.974Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T02:18:13.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2351583acc1cae4a4174a"
+  },
+  "name": "daima",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-28T22:13:41.634Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:28:56.616Z"
+  }
+}]
