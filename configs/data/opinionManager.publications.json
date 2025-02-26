@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "67c13929e64c977782f0fb1a"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "titulo": "ps5",
+  "categorie": {
+    "$oid": "67c11ce50f8e9177494291f5"
+  },
+  "content": "La PS5 es la consola que actualmente tiene los mejores graficos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T04:18:49.239Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T04:18:49.239Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c13fe107eb053f2539bb5a"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "titulo": "ps5",
+  "categorie": {
+    "$oid": "67c11c230f8e9177494291f2"
+  },
+  "content": "La PS5 es la consola que actualmente tiene los mejores graficos",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-28T04:47:29.421Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T04:59:55.372Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2352483acc1cae4a4174e"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "titulo": "mongodb",
+  "categorie": {
+    "$oid": "67c2351583acc1cae4a4174a"
+  },
+  "content": "MongoDB es el nuevo administrador de base de datos que se usa actualmente",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-28T22:13:56.233Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:15:20.388Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c23f1cf090f71808cefd86"
+  },
+  "user": {
+    "$oid": "67c12d1865a563973cd2b454"
+  },
+  "titulo": "daima",
+  "categorie": {
+    "$oid": "67c2351583acc1cae4a4174a"
+  },
+  "content": "El super saiyayin 4 era inebitable",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T22:56:28.488Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:56:28.488Z"
+  }
+}]

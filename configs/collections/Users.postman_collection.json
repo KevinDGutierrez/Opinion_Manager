@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "8db6f6a8-c465-41a1-be30-bd56bfa8c050",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42402387"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin\",\r\n    \"surname\": \"Gutierrez\",\r\n    \"username\": \"Kevin\",\r\n    \"email\": \"kgutierrez@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"33332222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kgutierrez@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjE3ZWFhOTg1MWU5NTJkMjVjZmQiLCJpYXQiOjE3NDA1MDI4NDAsImV4cCI6MTc0MDUwNjQ0MH0.SeL2Dl17t_ilA9zCuwjI5KQPIFcn7XyqkEZMISoyP6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Danie\",\r\n    \"surname\": \"Rodrigue\",\r\n    \"username\": \"Dan\",\r\n    \"email\": \"dani@gmail.com\",\r\n    \"actualpassword\":\"87654321\",\r\n    \"password\": \"87654321\",\r\n    \"phone\": \"22225550\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/users/67bdf17eaa9851e952d25cfd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"users",
+						"67bdf17eaa9851e952d25cfd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
