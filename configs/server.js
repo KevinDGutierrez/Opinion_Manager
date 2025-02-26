@@ -5,6 +5,13 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import limiter from '../src/middlewares/validar-cant-peticiones.js';
+import { createAdmin } from '../src/users/user.controller.js';
+import userRoutes from '../src/users/user.routes.js'
+import categorieRoutes from '../src/categories/categorie.routes.js'
+import { createCategory } from '../src/categories/categorie.controller.js'
+import publicationRoutes from '../src/publications/publication.routes.js'
+import CommentRoutes from '../src/comments/comment.routes.js'
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -12,26 +19,29 @@ const middlewares = (app) => {
     app.use(express.json());
     app.use(helmet());
     app.use(morgan('dev'));
+
 }
 
 const routes = (app) => {
+    app.use('/opinionManager/v1/users', userRoutes)
+    app.use('/opinionManager/v1/categories', categorieRoutes)
+    app.use('/opinionManager/v1/publications', publicationRoutes)
+    app.use('/opinionManager/v1/comments', CommentRoutes)
 
 };
 
-const conectarDB = async () => {
     try {
         await dbConnection();
         console.log('¡¡Conexión a la base de datos exitosa!!');
+        await createAdmin();
+        await createCategory();
     } catch (error) {
         console.error('Error al conectar a la base de datos:', error);
         process.exit(1);
     }
-}
 
-export const initServer = async () => {
     const app = express();
     const port = process.env.PORT || 3000;
-
     try {
         middlewares(app);
         conectarDB();
@@ -41,4 +51,3 @@ export const initServer = async () => {
     } catch (error) {
         console.log(`Server init failded: ${error}`);
     }
-}
