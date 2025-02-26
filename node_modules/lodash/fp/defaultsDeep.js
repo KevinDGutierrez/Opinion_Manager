@@ -1,5 +1,5 @@
 var convert = require('./convert'),
-    func = convert('defer', require('../defer'), require('./_falseOptions'));
+    func = convert('defaultsDeep', require('../defaultsDeep'));
 
 func.placeholder = require('./placeholder');
 module.exports = func;

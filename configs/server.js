@@ -19,7 +19,7 @@ const middlewares = (app) => {
     app.use(express.json());
     app.use(helmet());
     app.use(morgan('dev'));
-
+    app.use(limiter);
 }
 
 const routes = (app) => {
@@ -27,9 +27,9 @@ const routes = (app) => {
     app.use('/opinionManager/v1/categories', categorieRoutes)
     app.use('/opinionManager/v1/publications', publicationRoutes)
     app.use('/opinionManager/v1/comments', CommentRoutes)
-
 };
 
+const conectarDB = async () => {
     try {
         await dbConnection();
         console.log('¡¡Conexión a la base de datos exitosa!!');
@@ -39,9 +39,12 @@ const routes = (app) => {
         console.error('Error al conectar a la base de datos:', error);
         process.exit(1);
     }
+}
 
+export const initServer = async () => {
     const app = express();
     const port = process.env.PORT || 3000;
+
     try {
         middlewares(app);
         conectarDB();
@@ -51,3 +54,4 @@ const routes = (app) => {
     } catch (error) {
         console.log(`Server init failded: ${error}`);
     }
+}
