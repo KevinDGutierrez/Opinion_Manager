@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "9481eaa4-1fda-4d30-9393-585acd53b5b9",
+		"name": "categorie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42402387"
+	},
+	"item": [
+		{
+			"name": "addcategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDkzODRmZmY3YWNlZjJmMjA1NzgiLCJpYXQiOjE3NDA3ODAxNzAsImV4cCI6MTc0MDc4Mzc3MH0.-6iDJp74hHn_Ised4ej2RBTha2VTg9MflCuGOreNHXk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"db\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/categories/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"categories",
+						"addCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDkzODRmZmY3YWNlZjJmMjA1NzgiLCJpYXQiOjE3NDA3ODg3NDgsImV4cCI6MTc0MDc5MjM0OH0.NOHXToaIqAtJRyvzUoMIWYiueHZGIV3jpT72U_B29-E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Comedy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/categories/67bf48e333a9ded56e405d61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"categories",
+						"67bf48e333a9ded56e405d61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMDkzODRmZmY3YWNlZjJmMjA1NzgiLCJpYXQiOjE3NDA3ODAxNzAsImV4cCI6MTc0MDc4Mzc3MH0.-6iDJp74hHn_Ised4ej2RBTha2VTg9MflCuGOreNHXk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/opinionManager/v1/categories/67c2351583acc1cae4a4174a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"opinionManager",
+						"v1",
+						"categories",
+						"67c2351583acc1cae4a4174a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
