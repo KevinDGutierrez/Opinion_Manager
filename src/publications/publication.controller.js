@@ -187,18 +187,25 @@ export const getPublication = async (req = request, res = response) => {
     const publicationsWithComments = await Promise.all(
       publications.map(async (publication) => {
         const comments = await Comment.find({ publication: publication._id, estado: true })
-          .select('content createdAt') // 👈 Seleccionamos también createdAt
+          .select('content createdAt user')
           .populate('user', 'username');
 
         const formattedComments = comments.map(comment => ({
-          username: comment.user.username,
+          _id: comment._id, // ✅ Incluimos el _id para que funcione el botón Eliminar
+          username: comment.user?.username || "Anónimo",
           content: comment.content,
-          createdAt: comment.createdAt // 👈 Incluimos la fecha
+          createdAt: comment.createdAt
         }));
 
+        const pubObj = publication.toObject();
+
         return {
-          ...publication.toObject(),
-          createdAt: publication.createdAt,
+          _id: pubObj._id,
+          titulo: pubObj.titulo,
+          content: pubObj.content,
+          createdAt: pubObj.createdAt,
+          user: pubObj.user,
+          course: pubObj.course,
           comments: formattedComments
         };
       })
@@ -218,3 +225,5 @@ export const getPublication = async (req = request, res = response) => {
     });
   }
 };
+
+  
