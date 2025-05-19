@@ -9,10 +9,14 @@ import limiter from '../src/middlewares/validar-cant-peticiones.js';
 import { createAdmin } from '../src/users/user.controller.js';
 import userRoutes from '../src/users/user.routes.js'
 import categorieRoutes from '../src/categories/categorie.routes.js'
-import { createCategory } from '../src/categories/categorie.controller.js'
 import publicationRoutes from '../src/publications/publication.routes.js'
 import CommentRoutes from '../src/comments/comment.routes.js'
-
+import {
+    createCourses,
+    createCourses2,
+    createCourses3
+} from "../src/courses/courses.controller.js"
+import coursesRoutes from '../src/courses/courses.routes.js'
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
     app.use(cors());
@@ -23,10 +27,10 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-    app.use('/opinionManager/v1/users', userRoutes)
-    app.use('/opinionManager/v1/categories', categorieRoutes)
-    app.use('/opinionManager/v1/publications', publicationRoutes)
-    app.use('/opinionManager/v1/comments', CommentRoutes)
+    app.use('/Blog/v1/users', userRoutes)
+    app.use('/Blog/v1/courses', coursesRoutes)
+    app.use('/Blog/v1/publications', publicationRoutes)
+    app.use('/Blog/v1/comments', CommentRoutes)
 };
 
 const conectarDB = async () => {
@@ -34,7 +38,9 @@ const conectarDB = async () => {
         await dbConnection();
         console.log('¡¡Conexión a la base de datos exitosa!!');
         await createAdmin();
-        await createCategory();
+        await createCourses();
+        await createCourses2();
+        await createCourses3();
     } catch (error) {
         console.error('Error al conectar a la base de datos:', error);
         process.exit(1);

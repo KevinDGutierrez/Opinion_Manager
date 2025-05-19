@@ -1,0 +1,189 @@
+[{
+  "_id": {
+    "$oid": "682acd4f01887c68d010590c"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "prueba corta",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7dec"
+  },
+  "content": "La prueba corta de sociales sera realizada esta semana",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T06:18:55.041Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T06:18:55.041Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682acd8001887c68d0105913"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "examen final",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de6"
+  },
+  "content": "El examen final de este bimestre contara con 40 preguntas",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T06:19:44.909Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T06:19:44.909Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682acdb901887c68d010591a"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "lectura semanal",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de9"
+  },
+  "content": "El libro que se leera esta semana ya esta subido en su apartado correspondiente",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T06:20:41.760Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T06:20:41.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ad9ff01887c68d0105994"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "prueba del mineduc",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de6"
+  },
+  "content": "Se daran tutorias apartir de la otras semana",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:13:03.390Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:13:03.390Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ada4b01887c68d010599b"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "prueba corta",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de6"
+  },
+  "content": "Se hara de modalidad presencial sin chatgpt",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:14:19.860Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:14:19.860Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ada8701887c68d01059a2"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "habilidades blandas",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7dec"
+  },
+  "content": "tema importante para el examen final",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:15:19.631Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:15:19.631Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682adaa601887c68d01059a9"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "lenguas perdidas",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7dec"
+  },
+  "content": "laboratorio linguistico la siguiente semana",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:15:50.590Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:15:50.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682adad001887c68d01059b0"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "redaccion",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de9"
+  },
+  "content": "Valores de un estudiante de Kinal",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:16:32.294Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:16:32.294Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682adb1901887c68d01059b7"
+  },
+  "user": {
+    "$oid": "682a5ab54d845f3dc9334bc7"
+  },
+  "titulo": "ejercicios de comprension",
+  "course": {
+    "$oid": "682a5500c680aad9ed6a7de9"
+  },
+  "content": "Punto fuerte en los examenes siguientes",
+  "comment": [],
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-05-19T07:17:45.590Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T07:17:45.590Z"
+  }
+}]

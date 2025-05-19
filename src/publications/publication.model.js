@@ -11,10 +11,10 @@ const publicationSchema = Schema({
         required: true,
         lowercase: true
     },
-    categorie:{
-        type: Schema.Types.ObjectId,
-        ref: "Categorie",
-        required: true
+    course: {
+    type: Schema.Types.ObjectId,
+    ref: "Course",
+    required: true
     },
     content:{
         type: String,
