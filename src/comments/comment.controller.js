@@ -17,7 +17,7 @@ export const addComment = async (req, res) => {
     }
 
     // Determinar username final
-    const finalUsername = username?.trim().toLowerCase() || "anónimo";
+    const finalUsername = username.toLowerCase() || "anónimo";
 
     // Buscar usuario correspondiente
     const user = await User.findOne({ username: finalUsername });

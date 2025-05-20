@@ -171,59 +171,50 @@ export const deletePublication = async (req, res = response) => {
 };
 
 export const getPublication = async (req = request, res = response) => {
-  try {
-    const { limite = 10, desde = 0 } = req.body;
-    const query = { estado: true };
-
-    const [total, publications] = await Promise.all([
-      Publication.countDocuments(query),
-      Publication.find(query)
-        .populate('user', 'username')
-        .populate('course', 'name')
-        .skip(parseInt(desde))
-        .limit(parseInt(limite))
-    ]);
-
-    const publicationsWithComments = await Promise.all(
-      publications.map(async (publication) => {
-        const comments = await Comment.find({ publication: publication._id, estado: true })
-          .select('content createdAt user')
-          .populate('user', 'username');
-
-        const formattedComments = comments.map(comment => ({
-          _id: comment._id, // ✅ Incluimos el _id para que funcione el botón Eliminar
-          username: comment.user?.username || "Anónimo",
-          content: comment.content,
-          createdAt: comment.createdAt
-        }));
-
-        const pubObj = publication.toObject();
-
-        return {
-          _id: pubObj._id,
-          titulo: pubObj.titulo,
-          content: pubObj.content,
-          createdAt: pubObj.createdAt,
-          user: pubObj.user,
-          course: pubObj.course,
-          comments: formattedComments
-        };
-      })
-    );
-
-    res.status(200).json({
-      success: true,
-      total,
-      publications: publicationsWithComments
-    });
-
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json({
-      msg: "Publication retrieval failed",
-      error
-    });
-  }
-};
-
+    try {
+      const { limite = 10, desde = 0 } = req.body;
+      const query = { estado: true };
   
+      const [total, publications] = await Promise.all([
+        Publication.countDocuments(query),
+        Publication.find(query)
+          .populate('user', 'username')
+          .populate('course', 'name')
+          .skip(parseInt(desde))
+          .limit(parseInt(limite))
+      ]);
+
+      const publicationsWithComments = await Promise.all(
+        publications.map(async (publication) => {
+          const comments = await Comment.find({ publication: publication._id, estado: true })
+            .select('content createdAt user')
+            .populate('user', 'username');
+  
+          const formattedComments = comments.map(comment => ({
+            _id: comment._id,
+            username: comment.user.username,
+            content: comment.content,
+            createdAt: comment.createdAt
+          }));
+  
+          return {
+            ...publication.toObject(),
+            comments: formattedComments
+          };
+        })
+      );
+  
+      res.status(200).json({
+        success: true,
+        total,
+        publications: publicationsWithComments
+      });
+  
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        msg: "Publication retrieval failed",
+        error
+      });
+    }
+};
