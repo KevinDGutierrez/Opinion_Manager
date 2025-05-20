@@ -183,3 +183,28 @@ export const createAdmin = async () => {
         console.error("No se pudo crear el admin: ", error)
     }
 }
+
+export const createAnonUser = async () => {
+  try {
+    const anon = await User.findOne({ username: "anónimo" });
+
+    if (!anon) {
+      const password = await hash("anonimo123"); // puedes usar una clave genérica
+      const newAnon = new User({
+        name: "Usuario",
+        surname: "Anónimo",
+        username: "anónimo",
+        email: "anonimo@anonimo.com",
+        phone: "00000000",
+        password: password,
+        role: "USER_ROLE",
+      });
+      await newAnon.save();
+      console.log("Usuario anónimo creado con éxito");
+    } else {
+      console.log("El usuario anónimo ya existe");
+    }
+  } catch (error) {
+    console.error("No se pudo crear el usuario anónimo: ", error);
+  }
+};

@@ -7,21 +7,24 @@ export const addComment = async (req, res) => {
   try {
     const { publicationId, username, content } = req.body;
 
-    // Buscar usuario por username (en minúsculas)
-    const user = await User.findOne({ username: username.toLowerCase() });
-    if (!user) {
-      return res.status(404).json({
-        success: false,
-        msg: "Usuario no encontrado",
-      });
-    }
-
     // Buscar publicación por ID
     const publication = await Publication.findById(publicationId);
     if (!publication) {
       return res.status(404).json({
         success: false,
         msg: "Publicación no encontrada",
+      });
+    }
+
+    // Determinar username final
+    const finalUsername = username?.trim().toLowerCase() || "anónimo";
+
+    // Buscar usuario correspondiente
+    const user = await User.findOne({ username: finalUsername });
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        msg: "Usuario no encontrado",
       });
     }
 
@@ -32,14 +35,14 @@ export const addComment = async (req, res) => {
       publication: publication._id,
     });
 
-    // Poblar datos para respuesta
-    const comDetails = await Comment.findById(comment._id)
+    // Poblar para respuesta
+    const populatedComment = await Comment.findById(comment._id)
       .populate("user", "username")
       .populate("publication", "titulo");
 
     return res.status(201).json({
       msg: "Comentario agregado correctamente",
-      comment: comDetails,
+      comment: populatedComment,
     });
   } catch (error) {
     console.log(error);
@@ -52,64 +55,50 @@ export const addComment = async (req, res) => {
 
 
 export const updateComment = async (req, res = response) => {
-    try {
-        const { id } = req.params;
-        const { _id, username, ...data } = req.body;
+  try {
+    const { id } = req.params;
+    const { content } = req.body;
 
-        const comment = await Comment.findById(id);
-        if (!comment) {
-            return res.status(400).json({
-                success: false,
-                msg: "Comment no encontrado"
-            });
-        }
-
-        const user = await User.findOne({ username: username.toLowerCase() });
-        if (!user) {
-            return res.status(400).json({
-                success: false,
-                msg: "Usuario no encontrado"
-            });
-        }
-
-        if (req.user.id !== comment.user.toString()) {
-            return res.status(403).json({
-                success: false,
-                msg: 'No tienes permisos para editar este comment'
-            });
-        }
-
-        if (comment.estado === false) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Este comentario ha sido eliminado'
-            });
-        }
-
-        
-        const updatedComment = await Comment.findByIdAndUpdate(id, data, { new: true });
-
-        const comDetails = await Comment.findById(updatedComment._id)
-            .populate('user', 'username')
-            .populate('publication', 'titulo');
-
-        return res.status(200).json({
-            success: true,
-            msg: "Comment actualizado con éxito",
-            comment: {
-                username: comDetails.user.username,
-                content: comDetails.content
-            }
-        });
-
-    } catch (error) {
-        console.log(error);
-        return res.status(500).json({
-            msg: "Comment update failed",
-            error
-        });
+    const comment = await Comment.findById(id);
+    if (!comment) {
+      return res.status(400).json({
+        success: false,
+        msg: "Comentario no encontrado",
+      });
     }
+
+    if (comment.estado === false) {
+      return res.status(400).json({
+        success: false,
+        msg: "Este comentario ha sido eliminado",
+      });
+    }
+
+    comment.content = content;
+    const updatedComment = await comment.save();
+
+    const comDetails = await Comment.findById(updatedComment._id)
+      .populate("user", "username")
+      .populate("publication", "titulo");
+
+    return res.status(200).json({
+      success: true,
+      msg: "Comentario actualizado con éxito",
+      comment: {
+        username: comDetails.user.username,
+        content: comDetails.content,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      msg: "Error al actualizar comentario",
+      error,
+    });
+  }
 };
+
 
 
 export const deleteComment = async (req, res = response) => {

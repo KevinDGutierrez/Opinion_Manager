@@ -17,6 +17,7 @@ import {
     createCourses3
 } from "../src/courses/courses.controller.js"
 import coursesRoutes from '../src/courses/courses.routes.js'
+import { createAnonUser } from '../src/users/user.controller.js'
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
     app.use(cors());
@@ -38,6 +39,7 @@ const conectarDB = async () => {
         await dbConnection();
         console.log('¡¡Conexión a la base de datos exitosa!!');
         await createAdmin();
+        await createAnonUser();
         await createCourses();
         await createCourses2();
         await createCourses3();
